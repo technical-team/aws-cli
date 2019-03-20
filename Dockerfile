@@ -7,4 +7,4 @@ RUN apk -v add --no-cache \
 RUN adduser -D aws 
 USER aws
 WORKDIR /home/aws
-ENTRYPOINT ["aws"]
+

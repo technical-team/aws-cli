@@ -1,0 +1,20 @@
+{
+  "name": "aws-cli",
+  "version": "1.0.0",
+  "description": "Docker image for using AWS CLI in Jenkins scripted pipelines",
+  "main": "index.js",
+  "scripts": {
+    "build": "docker build . -t connectchildcare/awscli",
+    "push": "docker push connectchildcare/awscli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technical-team/aws-cli.git"
+  },
+  "author": "Connect Childcare",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/technical-team/aws-cli/issues"
+  },
+  "homepage": "https://github.com/technical-team/aws-cli#readme"
+}
