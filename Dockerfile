@@ -1,15 +1,10 @@
-FROM alpine:3.6
-RUN apk -v --update add \
+FROM alpine
+RUN apk -v add --no-cache \
         python \
-        py-pip \
-        groff \
-        less \
-        mailcap \
-        && \
-    pip install --upgrade awscli==1.14.5 s3cmd==2.0.1 python-magic && \
-    apk -v --purge del py-pip && \
-    rm /var/cache/apk/*
-VOLUME /root/.aws
-VOLUME /project
-WORKDIR /project
+        py-pip && \
+    pip install --upgrade awscli && \
+    apk -v --purge del py-pip
+RUN adduser -D aws 
+USER aws
+WORKDIR /home/aws
 ENTRYPOINT ["aws"]
