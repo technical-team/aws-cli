@@ -8,3 +8,6 @@ RUN wget -O /usr/local/bin/ecs-cli https://amazon-ecs-cli.s3.amazonaws.com/ecs-c
 RUN adduser -D aws
 USER aws
 WORKDIR /home/aws
+
+# Enable saving profiles in ~/.ecs
+ENV HOME=/home/aws
