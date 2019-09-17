@@ -1,5 +1,6 @@
 FROM alpine
 RUN apk -v add --no-cache \
+        ca-certificates \
         python \
         py-pip && \
     pip install --upgrade awscli && \
